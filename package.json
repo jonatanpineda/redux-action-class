@@ -1,0 +1,53 @@
+{
+  "name": "redux-action-class",
+  "version": "1.0.0",
+  "description": "Redux middleware that allows to dispatch Typescript class-based actions.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "cover": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonatanPineda/redux-action-class.git"
+  },
+  "keywords": [
+    "redux",
+    "typescript",
+    "middleware",
+    "class",
+    "action"
+  ],
+  "author": "Jonatan Pineda Perez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JonatanPineda/redux-action-class/issues"
+  },
+  "homepage": "https://github.com/JonatanPineda/redux-action-class#readme",
+  "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "coveralls": "^3.0.2",
+    "jest": "^23.6.0",
+    "prettier": "^1.15.2",
+    "ts-jest": "^23.10.4",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.16.0",
+    "typescript": "^3.1.6"
+  },
+  "dependencies": {
+    "redux": "^4.0.1"
+  },
+  "jest": {
+    "preset": "ts-jest"
+  }
+}
