@@ -1,6 +1,6 @@
 {
   "name": "redux-action-class",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Redux middleware that allows to dispatch Typescript class-based actions.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
